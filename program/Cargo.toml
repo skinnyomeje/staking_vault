@@ -1,0 +1,30 @@
+[package]
+name = "staking_vault"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "staking_vault"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = {version = "0.28.0", features = ["init-if-needed"]}
+anchor-spl = "=0.28.0"
+ahash = "=0.8.6"
+solana-program = "=1.16.14"
+
+
+[dev-dependencies]
+solana-sdk = "=1.16.14"
+solana-program-test = "=1.16.14"
+spl-associated-token-account = {version = "2.2.0", features = ["no-entrypoint"] }
+solana-client = "1.16.14"
+solana-banks-interface = "1.14.10"
